@@ -1,0 +1,16 @@
+CREATE DATABASE siteimage;
+
+CREATE TABLE Users (
+    UserID int NOT NULL AUTO_INCREMENT,
+    UserName varchar(255),
+	UserEmail varchar(255),
+    CountryID int,
+    PRIMARY KEY (UserID),
+    FOREIGN KEY (CountryID) REFERENCES Countries (CountryID)
+);
+
+CREATE TABLE Countries (
+    CountryID int NOT NULL AUTO_INCREMENT,
+    CountryName varchar(255),
+	PRIMARY KEY (CountryID)
+);
