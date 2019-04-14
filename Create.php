@@ -5,11 +5,10 @@
 
         $nameError = null;
         $emailError = null;
-     
         $name = $_POST['name'];
         $email = $_POST['email'];
-       
         $valid = true;
+        
         if (empty($name)) {
             $nameError = 'Please enter name';
             $valid = false;
